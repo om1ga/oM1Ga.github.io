@@ -5,6 +5,9 @@ categories: Code Java 编码规范
 tags:  Java 学习笔记
 ---
 
+* content
+{:toc}
+
 今天对[**biezhi**](https://github.com/biezhi)老师的视频课程【**编写可读代码的艺术**】做了整理，也欢迎去B站学习这套视频。  
 视频地址：[https://www.bilibili.com/video/av25532096/?p=1](https://www.bilibili.com/video/av25532096/?p=1)
 
