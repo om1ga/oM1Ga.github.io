@@ -137,8 +137,4 @@ tags:  Java 学习笔记
 2. 减少变量作用域，作用域越小越好
 3. 变量只写一次最好，只设置一次的变量会让代码变得更容易理解
 
-### [【实验吧】XSS攻击与防御综合挑战专题](http://www.shiyanbar.com/experiment-course/detail/369)
-
-### [【那一夜随风】XSS跨站脚本攻击](https://www.cnblogs.com/phpstudy2015-6/p/6767032.html)
-
-### [关于XSS（跨站脚本攻击）和CSRF（跨站请求伪造）](https://cnodejs.org/topic/50463565329c5139760c34a1)
+最后,附上[谷歌Java编码规范中文版](https://jervyshi.gitbooks.io/google-java-styleguide-zh/content/index.html)
