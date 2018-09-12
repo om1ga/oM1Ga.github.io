@@ -67,3 +67,29 @@ public boolean judgeSquareSum(int c) {
     }
 ```
 
+### 完美数  
+
+完美数指的是一个数等于他所有的因子之和（不含自身），如`28`所有的因子有1、2、4、7、14，有`28=1+2+4+7+14`。给一个正整数n判断n是否为完美数。
+n的范围为`[0,100,000,000]`,由于这个范围内只有五个完美数可以直接返回
+以下是厚颜无耻的解法
+
+``` java
+bool checkPerfectNumber(int num) {
+    return num==6 || num==28 || num==496 || num==8128 || num==33550336;
+}
+```
+
+言归正传，由于1肯定是因子，可以提前加上，那么我们找其他因子的范围是`[2, sqrt(n)]`，如果使用i来遍历n，那么循环的条件是`i*i<n`，使用`sum`来累积各个`i`(可被n整除)下`i`和`n/i`的和,若`sum`已经大于`n`了则可以直接返回`false`，若`i*i = n`,则`i`被计算了两次，需要减去一个`i`。
+
+``` java
+ bool checkPerfectNumber(int num) {
+        if (num == 1) return false;
+        int sum = 1;
+        for (int i = 2; i * i <= num; ++i) {
+            if (num % i == 0) sum += (i + num / i);
+            if (i * i == num) sum -= i;
+            if (sum > num) return false;
+        }
+        return sum == num;
+    }
+```

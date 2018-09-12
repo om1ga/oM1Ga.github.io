@@ -34,3 +34,27 @@ select class from courses GROUP BY class having COUNT(DISTINCT student) >=5 ; /*
 
 
 ```
+
+
+### 查询连续出现的数
+
+如表logs有如下数据
++----+-----+
+| Id | Num |
++----+-----+
+| 1  |  1  |
+| 2  |  1  |
+| 3  |  1  |
+| 4  |  2  |
+| 5  |  1  |
+| 6  |  2  |
+| 7  |  2  |
++----+-----+
+返回连续出现3次的num 1
+可以使用id连接来实现
+
+``` sql
+select num fro logs a, logs b, logs c where a.id = b.id-1 and b.id = c.id-1
+```
+
+MySQL中，`datediff(a, b)`可以计算**日期a**和**日期b**相差的天数`(a-b)`;
