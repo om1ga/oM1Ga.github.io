@@ -20,6 +20,7 @@ tags:  Java 学习笔记
 ## 把信息装进名字里
 
 ### 有表现力的词
+
 | 单词 | 更多选择 |
 |--|--|
 | send | deliver,dispatch,announce,distribute,route |
